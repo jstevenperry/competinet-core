@@ -1,9 +1,9 @@
 #
 # The description of a network, including a trained network,
-# the desired state of a trained network (as in, "please model a network
+# the desired state of a trained network (as in, "please domain a network
 # that looks like this"), and so forth.
 
-from model.base_model import BaseModel
+from domain.base_model import BaseModel
 
 
 class NetworkDescriptor(BaseModel):

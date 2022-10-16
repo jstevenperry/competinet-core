@@ -3,7 +3,7 @@
 
 from enum import Enum
 
-from model.base_model import BaseModel
+from domain.base_model import BaseModel
 
 
 class Activation(Enum, BaseModel):

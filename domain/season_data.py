@@ -1,7 +1,7 @@
 #
 # Base class for a single season's worth of data
 
-from model.base_model import BaseModel
+from domain.base_model import BaseModel
 
 
 class SeasonData(BaseModel):
