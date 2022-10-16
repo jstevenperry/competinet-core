@@ -2,10 +2,11 @@
 # The description of a network, including a trained network,
 # the desired state of a trained network (as in, "please model a network
 # that looks like this"), and so forth.
-import json
+
+from model.base_model import BaseModel
 
 
-class NetworkDescriptor:
+class NetworkDescriptor(BaseModel):
     """
     Represents a trained network if is_trained is True, otherwise
     represents the desired parameters of a network to be trained
@@ -21,9 +22,6 @@ class NetworkDescriptor:
 
     def __init__(self, network_id):
         self.network_id = network_id
-
-    def to_json(self):
-        return json.dumps(self, default=lambda me: me.__dict__)
 
     def is_trained(self):
         return self.when_trained is not None
